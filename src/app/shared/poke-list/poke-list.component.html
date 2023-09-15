@@ -1,5 +1,5 @@
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-  <a class="pokemnon" *ngIf="pokemon.status">
+  <a [routerLink]="['details']" class="pokemnon" *ngIf="pokemon.status">
     <section class="pokemnon__status">
       <h2>{{ pokemon.name }}</h2>
       <ul>
