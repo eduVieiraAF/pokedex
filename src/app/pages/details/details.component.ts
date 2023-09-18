@@ -9,8 +9,8 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
-  private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon'; // Removi as barras finais
-  private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species'; // Removi as barras finais
+  private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
+  private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
 
   public pokemon: any;
   public isLoading: boolean = false;
@@ -22,14 +22,12 @@ export class DetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getPokemon(); // invoquei a função, na aula usamos get ao invés de public
+    this.getPokemon();
   }
 
   public getPokemon() {
     const id = this.activeRouter.snapshot.params['id'];
-    const pokemon = this.pokeApiService.apiGetPokemons(
-      `${this.urlPokemon}/${id}`
-    );
+    const pokemon = this.pokeApiService.apiGetPokemons(`${this.urlPokemon}/${id}`);
     const name = this.pokeApiService.apiGetPokemons(`${this.urlName}/${id}`);
 
     return forkJoin([pokemon, name]).subscribe(
