@@ -6,11 +6,12 @@
   text-decoration: none;
   color: white;
   font-weight: 700;
-  width: fit-content;
   padding: rem-calc(5) rem-calc(15);
   background-color: var(--secondary-color);
   margin-left: rem-calc(20);
   border-radius: rem-calc(12);
+  font-size: rem-calc(28);
+  text-align: center;
 }
 
 :host {
@@ -56,7 +57,7 @@
 				position: absolute;
 				top: rem-calc(-90);
 				left: rem-calc(30);
-				max-width: rem-calc(130);
+				max-width: rem-calc(160);
 				z-index: 10;
 
 				//Remove Bug Animation
@@ -81,9 +82,11 @@
 					margin-bottom: rem-calc (20);
 					font-weight: 700;
 					font-style: italic;
-					font-size: rem-calc(32);
+					font-size: rem-calc(42);
 					text-decoration: underline;
 					color: var(--secondary-color);
+          margin-bottom: rem-calc(20);
+          text-align: center;
 				}
 
 				ol {
