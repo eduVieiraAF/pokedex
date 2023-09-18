@@ -7,7 +7,7 @@
       <h2 class="slideInRight">{{ pokemon[1].names[0].name }}</h2>
     </section>
 
-    <section class="pokemon__status">
+    <section class="pokemon__status fadeIn">
       <img
         [src]="pokemon[0].sprites.other.dream_world.front_default"
         [alt]="pokemon[0].name"
@@ -29,7 +29,7 @@
           </ol>
         </section>
 
-        <a [routerLink]="['']" class="back"> Go Back </a>
+        <a [routerLink]="['']" class="back fadeIn"> Go Back </a>
       </article>
     </section>
   </ng-template>
